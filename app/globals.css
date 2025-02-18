@@ -1,21 +1,12 @@
+@import "keep-react/css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: white;
+  background-image: linear-gradient(to right, #37084D, #0D042A) ;
   font-family: Arial, Helvetica, sans-serif;
 }

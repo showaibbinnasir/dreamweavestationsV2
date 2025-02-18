@@ -1,0 +1,10 @@
+.btnBg {
+    height: 100px;
+    width: 200px;
+    background-image: url('/Subtract.png');
+    background-size: cover;
+    /* Cover entire button */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+}
