@@ -15,7 +15,7 @@ export default function NavigationBar() {
     }
     return (
         <div className='sticky top-0 z-[9999999] '>
-            <header className=' bg-gradient-to-r from-[#37084D] to-[#0D042A] opacity-75'>
+            <header className=' bg-gradient-to-r from-[#37084D] to-[#0D042A] opacity-[95%]'>
                 <div className='flex items-center gap-5'>
                     <Image className='w-[80px]' src={logo} alt="this is logo" placeholder='blur' quality={75} />
                     <h1>Dream Weave Stations</h1>

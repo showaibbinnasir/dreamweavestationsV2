@@ -4,6 +4,7 @@ import CustomButton from "./components/CustomButton/CustomButton";
 import buttonBg from "@/public/Subtract.png"
 import OurServices from "./components/OurServices/OurServices";
 import Coordinators from "./components/Coordinators/Coordinators";
+import OurWorks from "./components/OurWorks/OurWorks";
 export default function Home() {
   return (
     <div className="">
@@ -24,6 +25,9 @@ export default function Home() {
         </div>
         <div className="mt-5 lg:mt-[-100px]">
           <Coordinators></Coordinators>
+        </div>
+        <div>
+          <OurWorks></OurWorks>
         </div>
       </div>
     </div>

@@ -52,7 +52,7 @@ export default function OurServices() {
                 <div className='my-10'>
                     <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3'>
                         {
-                            services.map((service, i) => <div className=' bg-[#8758FA] p-3 lg:p-5 rounded-md' key={i}>
+                            services.map((service, i) => <div className=' bg-[#8758FA] p-3 lg:p-5 rounded-md hover:bg-[#a483f7] transition delay-75' key={i}>
                                 <div className='flex justify-center'>
                                     <Image width={50} src={service.thumbnail} alt='development' placeholder='blur' />
                                 </div>

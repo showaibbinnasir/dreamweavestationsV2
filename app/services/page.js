@@ -1,7 +1,16 @@
 import React from 'react'
+import OurServices from '../components/OurServices/OurServices'
+import Coordinators from '../components/Coordinators/Coordinators'
 
 export default function Services() {
   return (
-    <div>This is services page</div>
+    <div>
+      <div className='my-10'>
+        <OurServices></OurServices>
+      </div>
+      <div>
+        <Coordinators></Coordinators>
+      </div>
+    </div>
   )
 }
