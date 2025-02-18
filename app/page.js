@@ -10,7 +10,7 @@ export default function Home() {
     <div className="">
       <div className="flex flex-col items-center my-5">
         <h1 className="text-xl md:text-2xl lg:text-3xl  font-medium lg:font-semibold">Get Start With</h1>
-        <Image src={logo} alt="this is logo" placeholder="blur" quality={75} />
+        <Image src={logo} alt="this is logo" placeholder="blur" quality={100} />
       </div>
       <div>
         <div className="mx-1">

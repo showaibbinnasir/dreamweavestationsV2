@@ -23,7 +23,7 @@ export default function NavigationBar() {
 
                 <nav className='flex gap-5 items-center' ref={navRef}>
 
-                    <div className='bigAvater h-[150px] w-[150px] rounded-full '><Image className='' src={logo} alt="this is logo" placeholder='blur' quality={75} /></div>
+                    <div className='bigAvater h-[150px] w-[150px] rounded-full '><Image className='' src={logo} alt="this is logo" placeholder='blur' quality={100} /></div>
 
                     <span><Link prefetch={false} href='/' className={`text-white font-semibold p-[12px] rounded-lg transition ${pathname === "/"
                             ? "border-b-2 border-white"
