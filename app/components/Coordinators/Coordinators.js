@@ -16,7 +16,7 @@ export default function Coordinators() {
 
                 <h1 className='text-center mt-[50px] font-semibold text-transparent text-2xl lg:text-4xl bg-clip-text bg-gradient-to-r from-[#7E48EB] to-[#FF67FF]'>Technology we use</h1>
                 <div className='flex justify-center my-16'>
-                    <Image className='w-[300px] lg:w-[550px]  animate-slow-spin' src={tech} alt='technology' placeholder='blur' quality={75} />
+                    <Image className='w-[300px] lg:w-[550px]' src={tech} alt='technology' placeholder='blur' quality={75} />
                 </div>
 
             </div>
