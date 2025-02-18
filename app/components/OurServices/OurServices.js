@@ -48,7 +48,7 @@ export default function OurServices() {
     return (
         <div>
             <div className='relative bg-[#533567] mx-1 lg:mx-16 p-2 lg:p-10 rounded-md z-10'>
-                <h1 className='text-xl text-center md:text-2xl lg:text-3xl  font-medium lg:font-semibold'> Our Services </h1>
+                <h1 className='text-xl my-5 text-center md:text-2xl lg:text-3xl  font-medium lg:font-semibold'> Our Services </h1>
                 <div className='my-10'>
                     <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3'>
                         {
