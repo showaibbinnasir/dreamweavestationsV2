@@ -20,8 +20,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "DreamweaveStations",
-  description: "where imagination meets innovation in a tapestry of digital artistry",
+  title: "Dreamweave Stations",
+  description: "Where immagination meets innovations in a tapestry of digital artistry",
+  openGraph: {
+    title: "Dreamweave Stations",
+    description: "Where immagination meets innovations in a tapestry of digital artistry",
+    url: "https://dreamweavev2.netlify.app/",
+    type: "website",
+    images: [
+      {
+        url: "https://dreamweavestations.netlify.app/coordinates.png", // Thumbnail URL
+        width: 1200,
+        height: 630,
+        alt: "Thumbnail Image",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {

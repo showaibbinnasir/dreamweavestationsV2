@@ -1,7 +1,7 @@
 import React from 'react'
 import teams from "@/public/coordinators.png"
 import Image from 'next/image'
-import tech from "@/public/tech.png"
+import tech from "@/public/solar.gif"
 export default function Coordinators() {
     return (
         <div>
@@ -16,7 +16,10 @@ export default function Coordinators() {
 
                 <h1 className='text-center mt-[50px] font-semibold text-transparent text-2xl lg:text-4xl bg-clip-text bg-gradient-to-r from-[#7E48EB] to-[#FF67FF]'>Technology we use</h1>
                 <div className='flex justify-center my-16'>
-                    <Image className='w-[300px] lg:w-[550px]' src={tech} alt='technology' placeholder='blur' quality={75} />
+                    <Image className='w-[250px] lg:w-[400px]' src={tech} alt='technology' unoptimized quality={25} />
+                </div>
+                <div>
+                    
                 </div>
 
             </div>
