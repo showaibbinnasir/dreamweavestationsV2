@@ -10,6 +10,7 @@ import {
     CarouselSlides,
 } from 'keep-react'
 import Image from 'next/image'
+import defaultImage from "@/public/df.jpg"
 
 
 export default function ReviewSlider({ data }) {
@@ -29,7 +30,7 @@ export default function ReviewSlider({ data }) {
                                         }
                                         <hr />
                                         <div className='flex items-center gap-2 mt-5'>
-                                            <Image className='w-[40px] h-[40px] rounded-full object-cover' width={50} height={50} src={review.image} alt={`${review.name}`} unoptimized/>
+                                            <Image className='w-[40px] h-[40px] rounded-full object-cover' width={50} height={50} src={review.image || defaultImage } alt={`${review.name}`} unoptimized/>
                                             <h1 className='text-md font-semibold'>{review.name}</h1>
                                         </div>
 

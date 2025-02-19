@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
+import { ToastWrapper } from "keep-react";
 
 const poppin = Poppins({
   subsets: ["latin"],
@@ -32,6 +33,16 @@ export default function RootLayout({ children }) {
         <NavigationBar></NavigationBar>
         <div className="p-[-5]">
           {children}
+          <ToastWrapper
+            richColors={true}
+            toastOptions={{
+              classNames: {
+                title: 'text-body-3 font-medium',
+                toast: 'rounded-xl shadow-large',
+                description: 'text-body-4 font-normal',
+              },
+            }}
+          />
         </div>
       </body>
     </html>

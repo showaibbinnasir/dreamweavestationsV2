@@ -5,6 +5,8 @@ import buttonBg from "@/public/Subtract.png"
 import OurServices from "./components/OurServices/OurServices";
 import Coordinators from "./components/Coordinators/Coordinators";
 import OurWorks from "./components/OurWorks/OurWorks";
+import ContactUs from "./components/ContactUs/ContactUs";
+import BookNowBtn from "./components/BookNowBtn/BookNowBtn";
 export default function Home() {
   return (
     <div className="">
@@ -17,8 +19,8 @@ export default function Home() {
           <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-medium lg:font-semibold">Dream Weave Stations</h1>
           <h1 className="text-center text-sm">Where immagination meets innovations in a tapestry of digital artistry</h1>
         </div>
-        <div className="flex justify-center my-5">
-          <CustomButton text={"Book Now"} />
+        <div>
+          <BookNowBtn></BookNowBtn>
         </div>
         <div className="my-5">
           <OurServices></OurServices>
@@ -28,6 +30,11 @@ export default function Home() {
         </div>
         <div>
           <OurWorks></OurWorks>
+        </div>
+        <div>
+          <div>
+            <ContactUs></ContactUs>
+          </div>
         </div>
       </div>
     </div>

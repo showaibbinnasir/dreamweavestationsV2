@@ -1,6 +1,7 @@
 import React from 'react'
 import OurServices from '../components/OurServices/OurServices'
 import Coordinators from '../components/Coordinators/Coordinators'
+import ContactUs from '../components/ContactUs/ContactUs'
 
 export default function Services() {
   return (
@@ -11,6 +12,7 @@ export default function Services() {
       <div>
         <Coordinators></Coordinators>
       </div>
+      
     </div>
   )
 }
