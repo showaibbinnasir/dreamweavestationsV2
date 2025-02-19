@@ -54,7 +54,7 @@ export default function BookNowBtn() {
                                     </fieldset>
                                     <fieldset className="space-y-1.5 p-2 mt-5">
                                         <Label htmlFor="message">Your message*</Label>
-                                        <Textarea id="message" placeholder="Write your message here" rows={8} />
+                                        <Textarea className='text-gray-600' id="message" placeholder="Write your message here" rows={8} />
                                     </fieldset>
                                     <div>
                                         <CustomButton text={"Submit"}></CustomButton>

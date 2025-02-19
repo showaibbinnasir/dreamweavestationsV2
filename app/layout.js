@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import { ToastWrapper } from "keep-react";
+import Footer from "./components/Footer/Footer";
 
 const poppin = Poppins({
   subsets: ["latin"],
@@ -58,6 +59,7 @@ export default function RootLayout({ children }) {
             }}
           />
         </div>
+        <Footer></Footer>
       </body>
     </html>
   );

@@ -16,13 +16,14 @@ export default function Coordinators() {
 
                 <h1 className='text-center mt-[50px] font-semibold text-transparent text-2xl lg:text-4xl bg-clip-text bg-gradient-to-r from-[#7E48EB] to-[#FF67FF]'>Technology we use</h1>
                 <div className='flex justify-center my-16'>
-                    <Image className='w-[250px] lg:w-[500px]' src={tech} alt='technology' unoptimized quality={25} />
+                    <Image className='w-[350px] lg:w-[550px]' src={tech} alt='technology' unoptimized quality={25} />
                 </div>
                 <div>
                     
                 </div>
 
             </div>
+            
         </div>
     )
 }
