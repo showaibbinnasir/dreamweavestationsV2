@@ -23,6 +23,11 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Dreamweave Stations",
   description: "Where immagination meets innovations in a tapestry of digital artistry",
+  icons: {
+    icon: "/mainlogo.png", // Default favicon
+    shortcut: "/mainlogo.png",
+    apple: "/mainlogo.png", // For Apple devices
+  },
   openGraph: {
     title: "Dreamweave Stations",
     description: "Where immagination meets innovations in a tapestry of digital artistry",
@@ -30,7 +35,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://dreamweavestations.netlify.app/coordinates.png", // Thumbnail URL
+        url: "https://nomanandrohangcm.com/work1.jpg", // Thumbnail URL
         width: 1200,
         height: 630,
         alt: "Thumbnail Image",
