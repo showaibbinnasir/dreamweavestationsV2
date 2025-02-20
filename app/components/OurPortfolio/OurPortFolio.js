@@ -5,6 +5,7 @@ import cozy from "@/public/work2.jpg"
 import Noman from "@/public/work3.jpg"
 import china from "@/public/work4.jpg"
 import sports from "@/public/work5.jpg"
+import nextGen from "@/public/work6.jpg"
 import Image from 'next/image'
 
 export default function OurPortFolio() {
@@ -48,6 +49,15 @@ export default function OurPortFolio() {
             thumbnail: sports,
             preview: "https://www.behance.net/gallery/200164345/Football-Tournament-Poster",
             technology: ["Photoshop", "Illustrator", "Canva"]
+        },
+        ,
+        {
+            name: "Next Gen FX",
+            category: "Visual Effects (VFX)",
+            workType: "Website | Ui/Ux",
+            thumbnail: nextGen,
+            preview: "https://nextgenfx.netlify.app/",
+            technology: ["ReactJs", "NodeJS", "MongoDB", "ExpressJS", "Figma"]
         }
     ]
     return (
