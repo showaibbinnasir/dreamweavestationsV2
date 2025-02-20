@@ -12,7 +12,7 @@ export default function ContactUs() {
     <div>
       <div className='relative flex justify-center my-5 z-50'>
         <div className='bg-[#8657FB] mx-5 w-[650px] py-10 rounded-md shadow-xl'>
-          <h1 className='text-center text-xl font-semibold lg:text-3xl '>Contact Us</h1>
+          <h1 className='text-center text-xl font-semibold lg:text-3xl '>About Us</h1>
 
           <div className='flex flex-col items-center gap-5 my-5 p-5'>
             <div className='flex flex-col lg:flex-row items-center gap-6'>
