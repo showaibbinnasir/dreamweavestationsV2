@@ -7,6 +7,7 @@ import Coordinators from "./components/Coordinators/Coordinators";
 import OurWorks from "./components/OurWorks/OurWorks";
 import ContactUs from "./components/ContactUs/ContactUs";
 import BookNowBtn from "./components/BookNowBtn/BookNowBtn";
+import ContactForm from "./components/ContactForm/ContactForm";
 export default function Home() {
   return (
     <div className="">
@@ -37,7 +38,7 @@ export default function Home() {
           </div>
         </div>
         <div>
-          
+          <ContactForm></ContactForm>
         </div>
       </div>
     </div>
