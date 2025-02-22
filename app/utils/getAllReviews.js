@@ -3,7 +3,7 @@ export default async function getAllReviews() {
 
       {
         next : {
-          revalidate : 5,
+          revalidate : 1,
         }
       }
     );

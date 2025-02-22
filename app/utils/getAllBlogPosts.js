@@ -3,7 +3,7 @@ export default async function getAllBlogPosts() {
 
       {
         next : {
-          revalidate : 5,
+          revalidate : 1,
         }
       }
     );
