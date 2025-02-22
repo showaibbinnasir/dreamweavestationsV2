@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Geist, Geist_Mono, Poppins, Anek_Bangla, Galada } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import { ToastWrapper } from "keep-react";
@@ -6,9 +6,17 @@ import Footer from "./components/Footer/Footer";
 
 const poppin = Poppins({
   subsets: ["latin"],
-  weight: '400'
+  weight: '400',
+  variable : "--font-english"
 
 })
+
+const banglatext = Anek_Bangla({
+  subsets : ["bengali"],
+  weight : "400",
+  variable : "--font-bangla"
+})
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,10 +56,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppin.className} antialiased`}
+        className={`${poppin.variable} ${banglatext.variable}  font-mixed antialiased`}
       >
         <NavigationBar></NavigationBar>
-        <div className="p-[-5]">
+        <div className="p-[-5] ">
           {children}
           <ToastWrapper
             richColors={true}

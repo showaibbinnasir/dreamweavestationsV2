@@ -1,3 +1,4 @@
+import GradientText from '@/app/components/GradientText/GradientText'
 import getAllBlogPosts from '@/app/utils/getAllBlogPosts'
 import getSinglePost from '@/app/utils/getSinglPost'
 import Image from 'next/image'
@@ -35,7 +36,7 @@ export default async function BlogPost({ params }) {
             <div>
 
                 <h1 className="text-sm text-center">Blog id: {post._id}</h1>
-                <h1 className="text-[#6A3DC5] text-2xl py-5 font-bold text-center">{post.title}</h1>
+                <GradientText text={post.title}></GradientText>
 
                 <h1 className="text-sm text-center text-gray-400">Date: {post.date}</h1>
                 <div className="py-5 flex items-center gap-3">

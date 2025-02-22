@@ -11,6 +11,9 @@ const config = {
       animation: {
         'slow-spin': 'spin 12s linear infinite', // Adjust duration (8s here)
       },
+      fontFamily: {
+        mixed: ['var(--font-english)', 'var(--font-bangla)', 'sans-serif'],
+      },
     },
   },
   plugins: [],
