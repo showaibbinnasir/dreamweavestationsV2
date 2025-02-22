@@ -1,4 +1,5 @@
 import GradientText from '@/app/components/GradientText/GradientText'
+import ShareFaceBook from '@/app/components/ShareFaceBook/ShareFaceBook'
 import getAllBlogPosts from '@/app/utils/getAllBlogPosts'
 import getSinglePost from '@/app/utils/getSinglPost'
 import Image from 'next/image'
@@ -31,6 +32,7 @@ export async function generateMetadata({ params }) {
 export default async function BlogPost({ params }) {
     const { id } = await params
     const post = await getSinglePost(id)
+    const postURL = `https://dreamweavev2.netlify.app/blogs/${post._id}`
     return (
         <div className=' px-2 lg:px-10'>
             <div>
@@ -45,6 +47,9 @@ export default async function BlogPost({ params }) {
 
                 </div>
                 <h1 className='banglatext text-lg my-3 text-justify' dangerouslySetInnerHTML={{ __html: post.description.replace(/\n/g, '<br>') }}></h1>
+                <div>
+                    <ShareFaceBook postURL={postURL}></ShareFaceBook>
+                </div>
             </div>
 
         </div>
