@@ -76,7 +76,7 @@ export default function OurPortFolio() {
                                 <h1 className='text-md mt-1'>{work.category}</h1>
                                 <div className='flex mt-2'>
                                     <div className='bg-[#8657FB] hover:bg-[#c7b5f4] px-4 py-1 rounded-full'>
-                                        <a target='_blank' href={work.preview}>Privew</a>
+                                        <a target='_blank' href={work.preview}>Preview</a>
                                     </div>
                                 </div>
                                 <div>

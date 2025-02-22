@@ -17,13 +17,13 @@ export default function NavigationBar() {
         <div className='sticky top-0 z-[9999999] '>
             <header className=' bg-gradient-to-r from-[#37084D] to-[#0D042A] opacity-[95%]'>
                 <Link href="/"><div className='flex items-center gap-5'>
-                    <Image className='w-[80px]' src={logo} alt="this is logo" placeholder='blur' quality={75} />
+                    <Image className='w-[80px]' src={logo} alt="this is logo" quality={75} />
                     <h1>Dream Weave Stations</h1>
                 </div> </Link>
 
                 <nav className='flex gap-5 items-center' ref={navRef}>
 
-                    <div className='bigAvater h-[150px] w-[150px] rounded-full '><Image className='' src={logo} alt="this is logo" placeholder='blur' quality={100} /></div>
+                    <div className='bigAvater h-[150px] w-[150px] rounded-full '><Image className='' src={logo} alt="this is logo" quality={100} /></div>
 
                     <span><Link prefetch={false} href='/' className={`text-white font-semibold p-[12px] rounded-lg transition ${pathname === "/"
                         ? "border-b-2 border-white"
@@ -44,7 +44,7 @@ export default function NavigationBar() {
                     <span><Link prefetch={false} href='/contact' className={`text-white font-semibold p-[12px] rounded-lg transition ${pathname === "/contact"
                         ? "border-b-2 border-white"
                         : "hover:text-[#70CBDD]"
-                        }`}>contact</Link></span>
+                        }`}>Contact</Link></span>
                     <span><Link prefetch={false} href='/about' className={`text-white font-semibold p-[12px] rounded-lg transition ${pathname === "/about"
                         ? "border-b-2 border-white"
                         : "hover:text-[#70CBDD]"

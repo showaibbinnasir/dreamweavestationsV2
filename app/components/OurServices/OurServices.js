@@ -64,7 +64,7 @@ export default function OurServices() {
                 </div>
             </div>
             <div className='relative w-[100%] mt-[-75px] md:mt-[-150px] lg:mt-[-350px] z-0'>
-                <Image className='w-[100%]' src={bgDes} alt='this is design' placeholder='blur' quality={100} />
+                <Image className='w-[100%]' src={bgDes} alt='this is design' quality={100} />
             </div>
         </div>
     )
