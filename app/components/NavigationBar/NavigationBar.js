@@ -37,10 +37,14 @@ export default function NavigationBar() {
                         ? "border-b-2 border-white"
                         : "hover:text-[#70CBDD]"
                         }`}>Portfolio</Link></span>
+                    <span><Link prefetch={false} href='/blogs' className={`text-white font-semibold p-[12px] rounded-lg transition ${pathname === "/blogs"
+                        ? "border-b-2 border-white"
+                        : "hover:text-[#70CBDD]"
+                        }`}>Blogs</Link></span>
                     <span><Link prefetch={false} href='/contact' className={`text-white font-semibold p-[12px] rounded-lg transition ${pathname === "/contact"
                         ? "border-b-2 border-white"
                         : "hover:text-[#70CBDD]"
-                        }`}>Contatct</Link></span>
+                        }`}>contact</Link></span>
                     <span><Link prefetch={false} href='/about' className={`text-white font-semibold p-[12px] rounded-lg transition ${pathname === "/about"
                         ? "border-b-2 border-white"
                         : "hover:text-[#70CBDD]"
