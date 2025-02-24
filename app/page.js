@@ -8,6 +8,7 @@ import OurWorks from "./components/OurWorks/OurWorks";
 import ContactUs from "./components/ContactUs/ContactUs";
 import BookNowBtn from "./components/BookNowBtn/BookNowBtn";
 import ContactForm from "./components/ContactForm/ContactForm";
+import AffiliatedProgram from "./components/AffiliatedProgram/AffiliatedProgram";
 export default function Home() {
   return (
     <div className="">
@@ -34,9 +35,15 @@ export default function Home() {
         </div>
         <div>
           <div>
+            <AffiliatedProgram></AffiliatedProgram>
+          </div>
+        </div>
+        <div>
+          <div>
             <ContactUs></ContactUs>
           </div>
         </div>
+
         <div>
           <ContactForm></ContactForm>
         </div>

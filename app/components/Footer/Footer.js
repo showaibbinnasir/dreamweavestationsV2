@@ -31,7 +31,7 @@ export default function Footer() {
                     <div>
                         <h1 className='text-xl font-semibold mb-3'>Address</h1>
                         <div className='flex flex-col gap-2'>
-                            <h1 className='w-[300px]'>53, KB Kazi Nazrul Islam Road, Chittagong, Bangladesh, 4000</h1>
+                            <h1 className='w-[300px]'>53, Kazi Nazrul Islam Road, Chittagong, Bangladesh, 4000</h1>
                         </div>
                     </div>
                 </div>
