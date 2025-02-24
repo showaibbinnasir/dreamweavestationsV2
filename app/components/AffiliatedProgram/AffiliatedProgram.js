@@ -55,7 +55,7 @@ export default function AffiliatedProgram() {
             <div>
                 <h1 className='text-2xl lg:text-3xl font-semibold text-center my-5'>Products</h1>
                 <div className='flex justify-center'>
-                    <div className='grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-5'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-5'>
                         {
                             products.map((product, i) => <a href='https://www.facebook.com/profile.php?id=61567846746801' target='_blank' key={i}> <div className='bg-[#533567] hover:bg-[#a588b8] p-10 rounded-md text-center' key={i}>
                                 <div className='flex justify-center'>
