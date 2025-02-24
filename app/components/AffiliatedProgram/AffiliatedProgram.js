@@ -61,7 +61,7 @@ export default function AffiliatedProgram() {
                                 <div className='flex justify-center'>
                                     <Image src={product.image} className=" object-cover h-[250px] w-[150px]" alt={product.title} />
                                 </div>
-                                <h1 className='text-2xl font-semibold mt-5'>{product.title}</h1>
+                                <h1 className='text-2xl font-semibold mt-5'>{product.title.substring(0, 15)}...</h1>
                                 <h1 className='text-xl font-semibold mt-2 text-[#ffc654]'>{product.price}</h1>
                                 <h1 className='text-left text-xl font-semibold my-2'>Ingreditents</h1>
                                 <div>
