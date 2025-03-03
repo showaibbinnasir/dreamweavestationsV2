@@ -21,11 +21,7 @@ export default function BookNowBtn() {
     const handleForm = e => {
         e.preventDefault()
         const form = e.target;
-        const name = form.userName.value;
-        const email = form.email.value;
-        const number = form.number.value;
-        const text = form.details.value;
-        emailjs.sendForm("service_pnv43f1", "template_y9a1ws8", e.target, "dd2lVj1z9ozm5tAk6")
+        emailjs.sendForm("service_pnv43f1", "template_wm1aujm", form, "dd2lVj1z9ozm5tAk6")
         toast.success("Message sent!")
         e.target.reset()
     }
