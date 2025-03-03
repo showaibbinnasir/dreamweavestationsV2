@@ -1,5 +1,6 @@
 'use client'
 import { Check } from 'phosphor-react'
+import emailjs from "@emailjs/browser";
 import {
     Button,
     Input,
@@ -16,11 +17,17 @@ import {
 } from 'keep-react'
 import React from 'react'
 import CustomButton from '../CustomButton/CustomButton'
-
 export default function BookNowBtn() {
     const handleForm = e => {
         e.preventDefault()
-        toast.error("Still in construction mode!")
+        const form = e.target;
+        const name = form.userName.value;
+        const email = form.email.value;
+        const number = form.number.value;
+        const text = form.details.value;
+        emailjs.sendForm("service_pnv43f1", "template_y9a1ws8", e.target, "dd2lVj1z9ozm5tAk6")
+        toast.success("Message sent!")
+        e.target.reset()
     }
     return (
         <div>
@@ -42,22 +49,22 @@ export default function BookNowBtn() {
                                 <form onSubmit={handleForm} className=''>
                                     <fieldset className="max-w-md space-y-1 mt-5">
                                         <Label htmlFor="name">Enter Name</Label>
-                                        <Input className='w-[300px] lg:w-[550px]' id="name" placeholder="Enter name" type="text" />
+                                        <Input className='w-[300px] lg:w-[550px]' name='userName' id="name" placeholder="Enter name" required type="text" />
                                     </fieldset>
                                     <fieldset className="max-w-md space-y-1 mt-5">
                                         <Label htmlFor="name">Enter Email</Label>
-                                        <Input className='w-[300px] lg:w-[550px]' id="name" placeholder="Enter name" type="text" />
+                                        <Input className='w-[300px] lg:w-[550px]' name='email' id="name" placeholder="Enter Email" required type="text" />
                                     </fieldset>
                                     <fieldset className="max-w-md space-y-1 mt-5">
                                         <Label htmlFor="name">Enter Phone Number</Label>
-                                        <Input className='w-[300px] lg:w-[550px]' id="name" placeholder="Enter name" type="text" />
+                                        <Input className='w-[300px] lg:w-[550px]' id="name" name='number' placeholder="Enter Phone Number" required type="text" />
                                     </fieldset>
                                     <fieldset className="space-y-1.5 p-2 mt-5">
                                         <Label htmlFor="message">Your message*</Label>
-                                        <Textarea className='text-gray-600' id="message" placeholder="Write your message here" rows={8} />
+                                        <Textarea className='text-gray-600' required id="message" name='details' placeholder="Write your message here" rows={8} />
                                     </fieldset>
                                     <div>
-                                        <CustomButton text={"Submit"}></CustomButton>
+                                        <CustomButton text={"Submit"}> </CustomButton>
                                     </div>
                                 </form>
                             </div>

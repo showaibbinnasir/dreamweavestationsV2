@@ -38,6 +38,7 @@ export default function Home() {
             <AffiliatedProgram></AffiliatedProgram>
           </div>
         </div>
+        <hr className=" mx-2 mb-10 lg:mx-10" />
         <div>
           <div>
             <ContactUs></ContactUs>

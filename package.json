@@ -9,13 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-class-names": "^8.5.2",
     "keep-react": "^1.6.1",
     "next": "15.1.7",
     "phosphor-react": "^1.4.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-whatsapp": "^0.3.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

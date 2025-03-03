@@ -7,6 +7,7 @@ import china from "@/public/work4.jpg"
 import sports from "@/public/work5.jpg"
 import nextGen from "@/public/work6.jpg"
 import Image from 'next/image'
+import ramadan from "@/public/ramadan.png"
 
 export default function OurPortFolio() {
     const works = [
@@ -58,6 +59,13 @@ export default function OurPortFolio() {
             thumbnail: nextGen,
             preview: "https://nextgenfx.netlify.app/",
             technology: ["ReactJs", "NodeJS", "MongoDB", "ExpressJS", "Figma"]
+        },        {
+            name: "Ramadan Calendar",
+            category: "Graphics Design",
+            workType: "Calendar Design",
+            thumbnail: ramadan,
+            preview: "https://www.behance.net/gallery/220494047/Ramadan-Calendar-2025",
+            technology: ["Photoshop", "Illustrator", "Canva"]
         }
     ]
     return (
