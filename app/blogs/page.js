@@ -1,7 +1,7 @@
 
 import React from 'react'
 import getAllBlogPosts from '../utils/getAllBlogPosts'
-import { Spinner } from 'keep-react'
+import { Button, Spinner } from 'keep-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -67,6 +67,9 @@ export default async function Blogs() {
                         }
 
                     </div>
+                </div>
+                <div className='flex justify-center my-5'>
+                        <Link href="/blogs/postBlog"><Button className='bg-[#6A3DC5]'>Publish your blog now</Button></Link>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@ import "./globals.css";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import { ToastWrapper } from "keep-react";
 import Footer from "./components/Footer/Footer";
+import TanstackProvider from "./components/Provider/TanstackProvider";
 
 const poppin = Poppins({
   subsets: ["latin"],
@@ -60,7 +61,7 @@ export default function RootLayout({ children }) {
       >
         <NavigationBar></NavigationBar>
         <div className="p-[-5] ">
-          {children}
+          <TanstackProvider>{children}</TanstackProvider>
           <ToastWrapper
             richColors={true}
             toastOptions={{

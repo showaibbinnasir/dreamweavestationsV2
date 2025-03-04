@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@tanstack/react-query": "^5.67.1",
     "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-class-names": "^8.5.2",
     "keep-react": "^1.6.1",

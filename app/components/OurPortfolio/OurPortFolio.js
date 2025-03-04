@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import GradientText from '../GradientText/GradientText'
 import haya from "@/public/work1.jpg"
 import cozy from "@/public/work2.jpg"
@@ -8,6 +9,7 @@ import sports from "@/public/work5.jpg"
 import nextGen from "@/public/work6.jpg"
 import Image from 'next/image'
 import ramadan from "@/public/ramadan.png"
+import { Button } from 'keep-react'
 
 export default function OurPortFolio() {
     const works = [
@@ -59,7 +61,7 @@ export default function OurPortFolio() {
             thumbnail: nextGen,
             preview: "https://nextgenfx.netlify.app/",
             technology: ["ReactJs", "NodeJS", "MongoDB", "ExpressJS", "Figma"]
-        },        {
+        }, {
             name: "Ramadan Calendar",
             category: "Graphics Design",
             workType: "Calendar Design",
@@ -68,6 +70,7 @@ export default function OurPortFolio() {
             technology: ["Photoshop", "Illustrator", "Canva"]
         }
     ]
+    const [showBtn, setShowBtn] = useState(false);
     return (
         <div>
             <div className='mt-[-50px]'>
@@ -76,32 +79,69 @@ export default function OurPortFolio() {
             <div className='flex justify-center my-10 mx-5'>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                     {
-                        works.map((work, i) => <div className='bg-[#222228] p-5 rounded-md' key={i}>
-                            <Image className='w-full h-[350px] lg:h-[550px] object-cover rounded-md' src={work.thumbnail} alt={work.name} quality={75} placeholder='blur' />
-                            <div className=' mx-2'>
-                                <h1 className='text-2xl text-[#8657FB] font-semibold uppercase mt-5'>{work.name}</h1>
-                                <h1 className='text-xl mt-1'>{work.workType}</h1>
-                                <h1 className='text-md mt-1'>{work.category}</h1>
-                                <div className='flex mt-2'>
-                                    <div className='bg-[#8657FB] hover:bg-[#c7b5f4] px-4 py-1 rounded-full'>
-                                        <a target='_blank' href={work.preview}>Preview</a>
+                        showBtn ?
+                            works.map((work, i) => <div className='bg-[#222228] p-5 rounded-md' key={i}>
+                                <Image className='w-full h-[350px] lg:h-[550px] object-cover rounded-md' src={work.thumbnail} alt={work.name} quality={75} placeholder='blur' />
+                                <div className=' mx-2'>
+                                    <h1 className='text-2xl text-[#8657FB] font-semibold uppercase mt-5'>{work.name}</h1>
+                                    <h1 className='text-xl mt-1'>{work.workType}</h1>
+                                    <h1 className='text-md mt-1'>{work.category}</h1>
+                                    <div className='flex mt-2'>
+                                        <div className='bg-[#8657FB] hover:bg-[#c7b5f4] px-4 py-1 rounded-full'>
+                                            <a target='_blank' href={work.preview}>Preview</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h1 className='text-md mt-2'>Technology Used</h1>
+                                        <div className='grid grid-cols-3 lg:flex gap-2'>
+                                            {
+                                                work.technology.map((tech, i) => <div className='bg-[#b962f4] px-4 py-1 cursor-pointer hover:bg-[#ddc2f0] mt-2 rounded-full' key={i}>
+                                                    <h1 className='text-[12px]'>{tech}</h1>
+                                                </div>)
+                                            }
+                                        </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <h1 className='text-md mt-2'>Technology Used</h1>
-                                    <div className='grid grid-cols-3 lg:flex gap-2'>
-                                        {
-                                            work.technology.map((tech, i) => <div className='bg-[#b962f4] px-4 py-1 cursor-pointer hover:bg-[#ddc2f0] mt-2 rounded-full' key={i}>
-                                                <h1 className='text-[12px]'>{tech}</h1>
-                                            </div>)
-                                        }
+                            </div>) :
+                            works.slice(0, 7).map((work, i) => <div className='bg-[#222228] p-5 rounded-md' key={i}>
+                                <Image className='w-full h-[350px] lg:h-[550px] object-cover rounded-md' src={work.thumbnail} alt={work.name} quality={75} placeholder='blur' />
+                                <div className=' mx-2'>
+                                    <h1 className='text-2xl text-[#8657FB] font-semibold uppercase mt-5'>{work.name}</h1>
+                                    <h1 className='text-xl mt-1'>{work.workType}</h1>
+                                    <h1 className='text-md mt-1'>{work.category}</h1>
+                                    <div className='flex mt-2'>
+                                        <div className='bg-[#8657FB] hover:bg-[#c7b5f4] px-4 py-1 rounded-full'>
+                                            <a target='_blank' href={work.preview}>Preview</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h1 className='text-md mt-2'>Technology Used</h1>
+                                        <div className='grid grid-cols-3 lg:flex gap-2'>
+                                            {
+                                                work.technology.map((tech, i) => <div className='bg-[#b962f4] px-4 py-1 cursor-pointer hover:bg-[#ddc2f0] mt-2 rounded-full' key={i}>
+                                                    <h1 className='text-[12px]'>{tech}</h1>
+                                                </div>)
+                                            }
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>)
+                            </div>)
                     }
                 </div>
+
             </div>
+            {
+                showBtn ?
+                    <div className='flex justify-center my-5'>
+                        <Button onClick={() => setShowBtn(false)} className='bg-[#8657FB]'>Show Less</Button>
+                    </div> :
+                    <div className='flex justify-center my-5'>
+                        <Button onClick={() => setShowBtn(true)} className='bg-[#8657FB]'>Show more</Button>
+                    </div>
+
+            }
+
+
         </div>
     )
 }
