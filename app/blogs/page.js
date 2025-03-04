@@ -4,33 +4,50 @@ import getAllBlogPosts from '../utils/getAllBlogPosts'
 import { Button, Spinner } from 'keep-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import addfile from "@/public/addfile.png"
+import gear from "@/public/gear.png"
+
 
 export const metadata = {
     title: "Dreamweave Stations | Blogs",
     description: "Read All Our Blogs",
     openGraph: {
-    title: "Dreamweave Stations | Blogs",
-      description: "Read All Our Blogs",
-      url: "https://dreamweavev2.netlify.app/contact",
-      type: "website",
-      images: [
-        {
-          url: "https://nomanandrohangcm.com/work1.jpg", // Thumbnail URL
-          width: 1200,
-          height: 630,
-          alt: "Thumbnail Image",
-        },
-      ],
+        title: "Dreamweave Stations | Blogs",
+        description: "Read All Our Blogs",
+        url: "https://dreamweavev2.netlify.app/contact",
+        type: "website",
+        images: [
+            {
+                url: "https://nomanandrohangcm.com/work1.jpg", // Thumbnail URL
+                width: 1200,
+                height: 630,
+                alt: "Thumbnail Image",
+            },
+        ],
     },
-  };
+};
 
 export default async function Blogs() {
     const posts = await getAllBlogPosts()
     return (
         <div className='my-10'>
+
             <div>
                 <h1 className='text-xl text-center md:text-2xl lg:text-3xl  font-medium lg:font-semibold'> All Blogs </h1>
                 <h1 className='text-center'>by Dreamweavestations</h1>
+            </div>
+            <div className='flex justify-between items-center gap-3 px-5 my-5 lg:px-16'>
+                <Link href="/blogs/postBlog">
+                    <div className='flex items-center gap-3 bg-[#6A3DC5] p-3 rounded-md cursor-pointer hover:bg-[#b793fe]'>
+                        <Image src={addfile} alt='file' height={30} width={30} />
+                        <h1>Publish your blog today</h1>
+                    </div>
+                </Link>
+                <Link href={"/blogs/blogmanager"}>
+                    <div className='bg-[#6A3DC5] p-3 rounded-md cursor-pointer hover:bg-[#b793fe]'>
+                        <Image src={gear} alt='gear' height={30} width={30} />
+                    </div>
+                </Link>
             </div>
             <div>
                 <div className="px-5 my-5 lg:px-16">
@@ -68,9 +85,7 @@ export default async function Blogs() {
 
                     </div>
                 </div>
-                <div className='flex justify-center my-5'>
-                        <Link href="/blogs/postBlog"><Button className='bg-[#6A3DC5]'>Publish your blog now</Button></Link>
-                </div>
+
             </div>
         </div>
     )

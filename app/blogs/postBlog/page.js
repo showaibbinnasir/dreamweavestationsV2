@@ -3,7 +3,7 @@ import CustomButton from '@/app/components/CustomButton/CustomButton'
 import GradientText from '@/app/components/GradientText/GradientText';
 import { Button, Input, Label, Spinner, Textarea, toast } from 'keep-react'
 import React, { useState } from 'react'
-
+import emailjs from "@emailjs/browser";
 export default function PostBlog() {
     function formatDate(date) {
         const day = date.getDate();
@@ -43,6 +43,7 @@ export default function PostBlog() {
         const currentDate = new Date();
         const date = formatDate(currentDate)
         const image = form.thumbnail.files[0];
+        const number = form.number.value;
         const formData = new FormData()
         formData.append('image', image)
         // const data = {name, title, date, description, isVerified}
@@ -55,7 +56,7 @@ export default function PostBlog() {
             .then(res => res.json())
             .then(imageData => {
                 imageOne = imageData?.data.url
-                const data = { name, imageOne, title, description, date, isVerified }
+                const data = { name, imageOne, title, description, number, date, isVerified }
                 fetch('https://portfolio-backend-one-rosy.vercel.app/blogs', {
                     method: 'POST',
                     headers: {
@@ -66,6 +67,12 @@ export default function PostBlog() {
                     .then(res => res.json())
                     .then(data => {
                         setIsLoading(false)
+                        const emailParams = {
+                            userName: name,
+                            blogTitle: title,
+                            number: number,
+                        };
+                        emailjs.send("service_pnv43f1", "template_y9a1ws8", emailParams, "dd2lVj1z9ozm5tAk6")
                         toast.success('Uploading and awaiting for verification')
                         form.reset()
                     }).catch(err => {
