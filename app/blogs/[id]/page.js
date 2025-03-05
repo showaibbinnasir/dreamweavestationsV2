@@ -46,7 +46,7 @@ export default async function BlogPost({ params }) {
                     <h1 className="text-lg font-semibold">{post.name}</h1>
 
                 </div>
-                <h1 className='banglatext text-lg my-3 text-justify' dangerouslySetInnerHTML={{ __html: post.description.replace(/\n/g, '<br>') }}></h1>
+                <h1 className='banglatext text-lg my-3 w-[100%] ' dangerouslySetInnerHTML={{ __html: post.description.replace(/\n/g, '<br>') }}></h1>
                 <div>
                     <ShareFaceBook postURL={postURL}></ShareFaceBook>
                 </div>
