@@ -3,14 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react'
 import addfile from "@/public/addfile.png"
+import insta from "@/public/insta.png"
 import {
     FacebookShareButton,
     TwitterShareButton,
-    LinkedinShareButton,
     WhatsappShareButton,
-    FacebookMessengerShareButton
 } from "react-share";
-import { FacebookIcon, TwitterIcon, LinkedinIcon, WhatsappIcon, FacebookMessengerIcon } from "react-share";
+import { FacebookIcon, TwitterIcon, WhatsappIcon } from "react-share";
 
 export default function SocialShare({ postURL, title }) {
     const [copied, setCopied] = useState(false);
@@ -21,16 +20,19 @@ export default function SocialShare({ postURL, title }) {
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
     };
+    const shareToInstagramDM = () => {
+        const shareUrl = postURL; // Your post URL
+        const instagramUrl = `https://www.instagram.com/direct/new/?text=${shareUrl}`;
+        
+        window.open(instagramUrl, "_blank");
+    };
     return (
         <div>
             <h1 className='text-blue-500 text-xl my-5'>Share to social media</h1>
-            <div className="flex gap-4">
+            <div className="flex items-center gap-4">
                 <FacebookShareButton url={postURL} quote={title}>
                     <FacebookIcon size={40} round />
                 </FacebookShareButton>
-                <FacebookMessengerShareButton url={postURL} title={title}>
-                    <FacebookMessengerIcon size={40} round />
-                </FacebookMessengerShareButton>
 
                 <TwitterShareButton url={postURL} title={title}>
                     <TwitterIcon size={40} round />
@@ -39,6 +41,9 @@ export default function SocialShare({ postURL, title }) {
                 <WhatsappShareButton url={postURL} title={title}>
                     <WhatsappIcon size={40} round />
                 </WhatsappShareButton>
+                <div className=' cursor-pointer' onClick={shareToInstagramDM}>
+                    <Image src={insta} width={50} height={50} alt='insta' />
+                </div>
 
                 <div className='my-5'>
                     <button
