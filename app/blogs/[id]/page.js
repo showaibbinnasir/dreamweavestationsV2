@@ -1,5 +1,6 @@
 import GradientText from '@/app/components/GradientText/GradientText'
 import ShareFaceBook from '@/app/components/ShareFaceBook/ShareFaceBook'
+import SocialShare from '@/app/components/SocialShare/SocialShare'
 import getAllBlogPosts from '@/app/utils/getAllBlogPosts'
 import getSinglePost from '@/app/utils/getSinglPost'
 import Image from 'next/image'
@@ -48,7 +49,8 @@ export default async function BlogPost({ params }) {
                 </div>
                 <h1 className='banglatext text-lg my-3 w-[100%] ' dangerouslySetInnerHTML={{ __html: post.description.replace(/\n/g, '<br>') }}></h1>
                 <div>
-                    <ShareFaceBook postURL={postURL}></ShareFaceBook>
+                    {/* <ShareFaceBook postURL={postURL}></ShareFaceBook> */}
+                    <SocialShare postURL={postURL} title={post.title}></SocialShare>
                 </div>
             </div>
 
