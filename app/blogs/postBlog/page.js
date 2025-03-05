@@ -1,9 +1,10 @@
 "use client"
-import CustomButton from '@/app/components/CustomButton/CustomButton'
 import GradientText from '@/app/components/GradientText/GradientText';
 import { Button, Input, Label, Spinner, Textarea, toast } from 'keep-react'
 import React, { useState } from 'react'
 import emailjs from "@emailjs/browser";
+
+
 export default function PostBlog() {
     function formatDate(date) {
         const day = date.getDate();
@@ -73,7 +74,7 @@ export default function PostBlog() {
                             number: number,
                         };
                         emailjs.send("service_pnv43f1", "template_y9a1ws8", emailParams, "dd2lVj1z9ozm5tAk6")
-                        toast.success('Uploading and awaiting for verification')
+                        toast.success('Uploaded and awaiting for verification')
                         form.reset()
                     }).catch(err => {
                         setIsLoading(false)
@@ -124,9 +125,9 @@ export default function PostBlog() {
                     </fieldset>
                     <div className='flex justify-center my-5'>
                         {
-                            isLoading ? 
-                            <Button className='w-[150px] bg-white' disabled ><Spinner /></Button> : 
-                            <Button className='w-[150px]' type='submit'>Publish your blog</Button>
+                            isLoading ?
+                                <Button className='w-[150px] bg-white' disabled ><Spinner /></Button> :
+                                <Button className='w-[150px]' type='submit'>Publish your blog</Button>
                         }
                     </div>
                 </form>

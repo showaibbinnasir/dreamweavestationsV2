@@ -28,7 +28,7 @@ export default function ManageBlog() {
             })
     }
     const [verificationLoading, setVerificationLoading] = useState(false)
-    const handleVerifyButton = id => {
+    const handleVerifyButton = (id , name) => {
         setVerificationLoading(true)
         const isVerified = true;
         const verify = { isVerified };
@@ -41,13 +41,13 @@ export default function ManageBlog() {
         })
             .then(res => res.json())
             .then(data => {
-                toast.success(`Updated Successfully`)
+                toast.success(`${name}'s blog Verified Successfully`)
                 setVerificationLoading(false)
                 refetch()
             })
     }
     const [notVerificationLoading, setNotVerificationLoading] = useState(false)
-    const handleNotVerifyButton = id => {
+    const handleNotVerifyButton = (id,name) => {
         setNotVerificationLoading(true)
         const isVerified = false;
         const verify = { isVerified };
@@ -60,7 +60,7 @@ export default function ManageBlog() {
         })
             .then(res => res.json())
             .then(data => {
-                toast.success(`Updated Successfully`)
+                toast.success(`${name}'s blog verification false!`)
                 setNotVerificationLoading(false)
                 refetch()
             })
@@ -130,14 +130,14 @@ export default function ManageBlog() {
                                                     </div>
                                                     {
                                                         data?.isVerified ?
-                                                            <div onClick={() => handleNotVerifyButton(data._id)}>
+                                                            <div onClick={() => handleNotVerifyButton(data._id, data.name)}>
                                                                 {
                                                                     notVerificationLoading ?
                                                                         <h1 className='bg-yellow-400 rounded-md p-3'><Spinner color='#ffffff' /></h1> :
                                                                         <h1 className='bg-green-400 p-3 rounded-md text-black'>Verified</h1>
                                                                 }
                                                             </div> :
-                                                            <div onClick={() => handleVerifyButton(data._id)}>
+                                                            <div onClick={() => handleVerifyButton(data._id, data.name)}>
                                                                 {
                                                                     verificationLoading ?
                                                                         <h1 className='bg-yellow-400 rounded-md p-3'><Spinner color='#ffffff' /></h1> :
