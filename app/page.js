@@ -9,6 +9,7 @@ import ContactUs from "./components/ContactUs/ContactUs";
 import BookNowBtn from "./components/BookNowBtn/BookNowBtn";
 import ContactForm from "./components/ContactForm/ContactForm";
 import AffiliatedProgram from "./components/AffiliatedProgram/AffiliatedProgram";
+import BlogSection from "./components/BlogSection/BlogSection";
 
 
 
@@ -35,6 +36,9 @@ export default function Home() {
         </div>
         <div>
           <OurWorks></OurWorks>
+        </div>
+        <div>
+          <BlogSection></BlogSection>
         </div>
         <div>
           <div>

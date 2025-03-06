@@ -1,6 +1,7 @@
 import React from 'react'
 import AffiliatedProgram from '../components/AffiliatedProgram/AffiliatedProgram'
 import OurProducts from '../components/OurProducts/OurProducts'
+import BlogSection from '../components/BlogSection/BlogSection';
 
 export const metadata = {
     title: "Dreamweave Stations | Products",
@@ -26,7 +27,7 @@ export default function Products() {
         <div>
             <div>
                 <div>
-                    <OurProducts></OurProducts>
+                    <BlogSection></BlogSection>
                 </div>
             </div>
             <div>
