@@ -37,6 +37,10 @@ export default function NavigationBar() {
                         ? "border-b-2 border-white"
                         : "hover:text-[#70CBDD]"
                         }`}>Portfolio</Link></span>
+                    <span><Link prefetch={false} href='/products' className={`text-white font-semibold p-[12px] rounded-lg transition ${pathname === "/products"
+                        ? "border-b-2 border-white"
+                        : "hover:text-[#70CBDD]"
+                        }`}>Products</Link></span>
                     <span><Link prefetch={false} href='/blogs' className={`text-white font-semibold p-[12px] rounded-lg transition ${pathname === "/blogs"
                         ? "border-b-2 border-white"
                         : "hover:text-[#70CBDD]"

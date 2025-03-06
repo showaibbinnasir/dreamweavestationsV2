@@ -85,7 +85,18 @@ export default function PostBlog() {
     }
 
     return (
-        <div>
+        <>
+            <head>
+                <title>Post yout blog today!</title>
+                <meta name="description" content="You can publish your blog from dreamweavestations." />
+                <meta property="og:title" content="Publish your blog now" />
+                <meta property="og:description" content="You can publish your blog from dreamweavestations." />
+                <meta property="og:image" content="https://i.ibb.co.com/cK9Ypk3L/Write-Your-Blog-Today.png" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://dreamweavev2.netlify.app/blogs/postBlog" />
+            </head>
             <div className='my-10'>
                 <GradientText text={"Post yout Blog Today"}></GradientText>
             </div>
@@ -132,7 +143,7 @@ export default function PostBlog() {
                     </div>
                 </form>
             </div>
-        </div>
+        </>
     )
 }
 

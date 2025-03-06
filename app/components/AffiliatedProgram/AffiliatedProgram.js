@@ -47,7 +47,7 @@ export default function AffiliatedProgram() {
             <a href="https://www.facebook.com/profile.php?id=61567846746801" target='_blank'>
                 <div className='flex justify-center my-10 mx-5'>
                     <div className='flex items-center bg-white p-5 rounded-md'>
-                        <Image src={pxnBussiness} alt='this is pxn' width={150} height={150} />
+                        <Image src={pxnBussiness} alt='this is pxn' width={120} height={120} />
                         <h1 className='text-[#036838] text-2xl font-semibold'>PXN30 Bussiness Center</h1>
                     </div>
                 </div>

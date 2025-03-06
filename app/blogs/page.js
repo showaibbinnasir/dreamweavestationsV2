@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import addfile from "@/public/addfile.png"
 import gear from "@/public/gear.png"
+import BlogOptions from '../components/BlogOptions/BlogOptions'
 
 
 export const metadata = {
@@ -18,7 +19,7 @@ export const metadata = {
         type: "website",
         images: [
             {
-                url: "https://nomanandrohangcm.com/work1.jpg", // Thumbnail URL
+                url: "https://i.ibb.co.com/cK9Ypk3L/Write-Your-Blog-Today.png", // Thumbnail URL
                 width: 1200,
                 height: 630,
                 alt: "Thumbnail Image",
@@ -36,18 +37,8 @@ export default async function Blogs() {
                 <h1 className='text-xl text-center md:text-2xl lg:text-3xl  font-medium lg:font-semibold'> All Blogs </h1>
                 <h1 className='text-center'>by Dreamweavestations</h1>
             </div>
-            <div className='flex justify-between items-center gap-3 px-5 my-5 lg:px-16'>
-                <Link href="/blogs/postBlog">
-                    <div className='flex items-center gap-3 bg-[#6A3DC5] p-3 rounded-md cursor-pointer hover:bg-[#b793fe]'>
-                        <Image src={addfile} alt='file' height={30} width={30} />
-                        <h1>Publish your blog today</h1>
-                    </div>
-                </Link>
-                <Link href={"/blogs/blogmanager"}>
-                    <div className='bg-[#6A3DC5] p-3 rounded-md cursor-pointer hover:bg-[#b793fe]'>
-                        <Image src={gear} alt='gear' height={30} width={30} />
-                    </div>
-                </Link>
+            <div>
+                <BlogOptions></BlogOptions>
             </div>
             <div>
                 <div className="px-5 my-5 lg:px-16">
