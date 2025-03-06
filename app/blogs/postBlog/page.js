@@ -97,6 +97,7 @@ export default function PostBlog() {
                 <meta property="og:image:height" content="630" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://dreamweavev2.netlify.app/blogs/postBlog" />
+                <meta key="og:image" property="og:image" content="https://i.ibb.co.com/cK9Ypk3L/Write-Your-Blog-Today.png" />
             </Head>
             <div className='my-10'>
                 <GradientText text={"Post yout Blog Today"}></GradientText>

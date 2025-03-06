@@ -10,29 +10,7 @@ import BookNowBtn from "./components/BookNowBtn/BookNowBtn";
 import ContactForm from "./components/ContactForm/ContactForm";
 import AffiliatedProgram from "./components/AffiliatedProgram/AffiliatedProgram";
 
-export const metadata = {
-  title: "Dreamweave Stations",
-  description: "Where immagination meets innovations in a tapestry of digital artistry",
-  icons: {
-    icon: "/mainlogo.png", // Default favicon
-    shortcut: "/mainlogo.png",
-    apple: "/mainlogo.png", // For Apple devices
-  },
-  openGraph: {
-    title: "Dreamweave Stations",
-    description: "Where immagination meets innovations in a tapestry of digital artistry",
-    url: "https://dreamweavev2.netlify.app/",
-    type: "website",
-    images: [
-      {
-        url: "https://i.ibb.co.com/Q7TrjKsn/work1.jpg", // Thumbnail URL
-        width: 1200,
-        height: 630,
-        alt: "Thumbnail Image",
-      },
-    ],
-  },
-};
+
 
 export default function Home() {
   return (
