@@ -1,5 +1,6 @@
-import PostingBlogContent from '@/app/components/PostingBlogContent/PostingBlogContent';
 import React from 'react'
+import PostingBlogContent from '@/app/components/PostingBlogContent/PostingBlogContent';
+
 
 
 export const metadata = {
@@ -8,7 +9,7 @@ export const metadata = {
     openGraph: {
         title: "Post yout blog today!",
         description: "You can publish your blog from dreamweavestations.",
-        url: "https://dreamweavev2.netlify.app/blog/postBlog",
+        url: "https://dreamweavev2.netlify.app/blogs/postBlog",
         type: "website",
         images: [
             {
@@ -25,9 +26,9 @@ export const metadata = {
 export default function PostBlog() {
 
     return (
-        <>
+        <div>
             <PostingBlogContent></PostingBlogContent>
-        </>
+        </div>
     )
 }
 

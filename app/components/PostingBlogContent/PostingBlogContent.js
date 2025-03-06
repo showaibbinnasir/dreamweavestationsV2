@@ -3,7 +3,6 @@ import GradientText from '@/app/components/GradientText/GradientText';
 import { Button, Input, Label, Spinner, Textarea, toast } from 'keep-react'
 import React, { useState } from 'react'
 import emailjs from "@emailjs/browser";
-import Head from 'next/head';
 
 export default function PostingBlogContent() {
     function formatDate(date) {
@@ -84,7 +83,7 @@ export default function PostingBlogContent() {
 
     }
     return (
-        <>
+        <div>
             <div className='my-10'>
                 <GradientText text={"Post yout Blog Today"}></GradientText>
             </div>
@@ -131,6 +130,6 @@ export default function PostingBlogContent() {
                     </div>
                 </form>
             </div>
-        </>
+        </div>
     )
 }
