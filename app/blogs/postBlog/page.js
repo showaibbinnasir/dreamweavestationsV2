@@ -12,7 +12,7 @@ export const metadata = {
         type: "website",
         images: [
             {
-                url: "https://i.ibb.co.com/cK9Ypk3L/Write-Your-Blog-Today.png", // Thumbnail URL
+                url: "https://i.ibb.co.com/JjQRP9NF/Write-Your-Blog-Today-7.png", // Thumbnail URL
                 width: 1200,
                 height: 630,
                 alt: "Thumbnail Image",
