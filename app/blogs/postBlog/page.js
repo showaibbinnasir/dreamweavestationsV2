@@ -3,6 +3,7 @@ import GradientText from '@/app/components/GradientText/GradientText';
 import { Button, Input, Label, Spinner, Textarea, toast } from 'keep-react'
 import React, { useState } from 'react'
 import emailjs from "@emailjs/browser";
+import Head from 'next/head';
 
 
 export default function PostBlog() {
@@ -86,7 +87,7 @@ export default function PostBlog() {
 
     return (
         <>
-            <head>
+            <Head>
                 <title>Post yout blog today!</title>
                 <meta name="description" content="You can publish your blog from dreamweavestations." />
                 <meta property="og:title" content="Publish your blog now" />
@@ -96,7 +97,7 @@ export default function PostBlog() {
                 <meta property="og:image:height" content="630" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://dreamweavev2.netlify.app/blogs/postBlog" />
-            </head>
+            </Head>
             <div className='my-10'>
                 <GradientText text={"Post yout Blog Today"}></GradientText>
             </div>
