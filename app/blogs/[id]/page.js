@@ -6,7 +6,6 @@ import getSinglePost from '@/app/utils/getSinglPost'
 import Image from 'next/image'
 import React from 'react'
 
-
 export async function generateMetadata({ params }) {
     const { id } = await params
     const post = await getSinglePost(id)
@@ -16,7 +15,7 @@ export async function generateMetadata({ params }) {
         openGraph: {
             title: post.title,
             description: post.description.substring(0, 100),
-            url: `https://dreamweavev2.netlify.app/blogs/${post._id}`,
+            url: `https://dreamweavestations.com/blogs/${post._id}`,
             type: "website",
             images: [
                 {
@@ -33,7 +32,7 @@ export async function generateMetadata({ params }) {
 export default async function BlogPost({ params }) {
     const { id } = await params
     const post = await getSinglePost(id)
-    const postURL = `https://dreamweavev2.netlify.app/blogs/${post._id}`
+    const postURL = `https://dreamweavestations.com/blogs/${post._id}`
     return (
         <div className=' px-2 lg:px-10'>
             <div>
@@ -64,9 +63,9 @@ export async function generateStaticParams() {
     const posts = await getAllBlogPosts()
 
     return posts.map((post) => ({
-        id : post._id
+        id: post._id
     }
 
     ))
-    
+
 }

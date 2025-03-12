@@ -6,7 +6,7 @@ export const metadata = {
   openGraph: {
     title: "Dreamweave Stations | About",
     description: "Lets meet with the coordinators",
-    url: "https://dreamweavev2.netlify.app/about",
+    url: "https://dreamweavestations.com/about",
     type: "website",
     images: [
       {

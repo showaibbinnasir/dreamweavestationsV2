@@ -40,7 +40,7 @@ export const metadata = {
   openGraph: {
     title: "Dreamweave Stations",
     description: "Where immagination meets innovations in a tapestry of digital artistry",
-    url: "https://dreamweavev2.netlify.app/",
+    url: "https://dreamweavestations.com/",
     type: "website",
     images: [
       {

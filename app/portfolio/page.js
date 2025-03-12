@@ -8,7 +8,7 @@ export const metadata = {
   openGraph: {
   title: "Dreamweave Stations | Portfolio",
     description: "Look at our previous works",
-    url: "https://dreamweavev2.netlify.app/portfolio",
+    url: "https://dreamweavestations.com/portfolio",
     type: "website",
     images: [
       {

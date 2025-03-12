@@ -9,7 +9,7 @@ export const metadata = {
     openGraph: {
         title: "Post yout blog today!",
         description: "You can publish your blog from dreamweavestations.",
-        url: "https://dreamweavev2.netlify.app/blogs/postBlog",
+        url: "https://dreamweavestations.com/blogs/postBlog",
         type: "website",
         images: [
             {
