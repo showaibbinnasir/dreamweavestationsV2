@@ -23,7 +23,7 @@ export default function Home() {
       <div>
         <div className="mx-1">
           <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-medium lg:font-semibold">Dream Weave Stations</h1>
-          <h1 className="text-center text-sm">Where immagination meets innovations in a tapestry of digital artistry</h1>
+          <h1 className="text-center text-sm">Where imagination meets innovations in a tapestry of digital artistry</h1>
         </div>
         <div>
           <BookNowBtn></BookNowBtn>

@@ -2,7 +2,7 @@
 import React from 'react'
 import logo from "@/public/mainlogo.png"
 import Link from 'next/link'
-import { DotsThree, XCircle } from 'phosphor-react'
+import { ArrowRight, DotsThree, XCircle } from 'phosphor-react'
 import { useRef } from 'react'
 import "./style.css"
 import Image from 'next/image'
@@ -14,7 +14,15 @@ export default function NavigationBar() {
         navRef.current.classList.toggle('responsive_nav')
     }
     return (
-        <div className='sticky top-0 z-[9999999] '>
+        <div className='sticky top-[-60px] z-[9999999] '>
+            <div className='flex justify-center bg-gradient-to-r from-[#37084D] to-[#0D042A] p-5'>
+                <Link href="/blogs" prefetch={false}>
+                    <div className='flex gap-2 items-center'>
+                        <h1 className='hover:underline cursor-pointer text-[10px] lg:text-[14px] '>Read all the blogs of dreamweavestations here</h1>
+                        <ArrowRight color="#ffffff" />
+                    </div>
+                </Link>
+            </div>
             <header className=' bg-gradient-to-r from-[#37084D] to-[#0D042A] opacity-[95%]'>
                 <Link href="/"><div className='flex items-center gap-5'>
                     <Image className='w-[80px]' src={logo} alt="this is logo" quality={75} />
